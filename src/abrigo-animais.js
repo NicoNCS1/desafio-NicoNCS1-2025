@@ -12,7 +12,6 @@ class AbrigoAnimais {
       { nome: "Loco", especie: "jabuti", brinquedos: ["SKATE", "RATO"] },
     ];
 
-    const brinquedosValidos = ['RATO', 'BOLA', 'LASER', 'NOVELO', 'CAIXA', 'SKATE'];
     const ordemAnimaisArray = ordemAnimais.split(',').sort();
     const listaBrinquedosPessoa1 = brinquedosPessoa1.split(',');
     const listaBrinquedosPessoa2 = brinquedosPessoa2.split(',');
