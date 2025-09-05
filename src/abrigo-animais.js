@@ -17,8 +17,6 @@ class AbrigoAnimais {
     const listaBrinquedosPessoa1 = brinquedosPessoa1.split(',');
     const listaBrinquedosPessoa2 = brinquedosPessoa2.split(',');
     const animal = ordemAnimaisArray.every(nomeanimal => animais.some(a => a.nome === nomeanimal));
-    const brinquedo1 = listaBrinquedosPessoa1.every(brinq => brinquedosValidos.includes(brinq));
-    const brinquedo2 = listaBrinquedosPessoa2.every(brinq => brinquedosValidos.includes(brinq));
     const ordem = { "gato": 0, "cão": 1, "jabuti": 2 };
     const ordemEspecie = ordemAnimaisArray.sort((a, b) => {
       const especieA = animais.find(animal => animal.nome === a).especie;
@@ -28,10 +26,6 @@ class AbrigoAnimais {
 
     if (!animal) {
       return { erro: 'Animal inválido' };
-    }
-    
-    if (!brinquedo1 || !brinquedo2) {
-      return { erro: 'Brinquedo inválido' };
     }
 
     function brinquedos(brinqpessoa, brinqanimal, especie) {
